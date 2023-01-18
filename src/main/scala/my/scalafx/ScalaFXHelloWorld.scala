@@ -4,6 +4,7 @@ import scalafx.application.JFXApp3
 import scalafx.scene.shape.Circle
 import scalafx.geometry.Insets
 import scalafx.scene.Scene
+import scalafx.scene.Group
 import scalafx.scene.effect.DropShadow
 import scalafx.scene.layout.HBox
 import scalafx.scene.paint.Color._
@@ -22,8 +23,16 @@ object ScalaFXHelloWorld extends JFXApp3 {
           centerX = 150
           centerY = 150
           radius = 50
+          fill = Color.Red
         }
-        content = List(circle)
+
+        val circle2 = new Circle {
+          centerX = 250
+          centerY = 250
+          radius = 45
+          fill = Color.Blue
+        }
+        content = List(circle, circle2)
       }
     }
   }
